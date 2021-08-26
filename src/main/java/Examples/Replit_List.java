@@ -17,23 +17,8 @@ public class Replit_List {
 //                new String[]{"John", "Brad", "Ange", "Sofia", "Emily"},
 //                new String[]{"sofia", "brad", "grace", "emily", "hazel"}));
 //        System.out.println(removeElement(new int[] {1,2,3,4,5,6},6));
-        isPalindrome("Ac raporunu koy okunur o parca");
     }
-//    Write a java program which accept a sentence as parameter, than reverses sentence by using StringBuilder
-//    and checks if sentence is palindrome or not (without case sensitivity).Use StringBuilder.
-//    Input : I love Java.
-//    Output:
-//    Reversed sentence : avaJ evol I.
-//    It is not a palindrome"
-    static void isPalindrome(String s){
-        String reverse = new StringBuilder(s).reverse().toString();
-        System.out.println(reverse);
-        if (s.replace(" ","").equalsIgnoreCase(reverse.replace(" ","")))
-            System.out.println("It is Palindrome.");
-        else
-            System.out.println("It is not a palindrome");
 
-    }
 //    write a Java program to removes a specific element from an array and put the remaining elements in a new array
 //    and prints the new array
 //    Input :{1,2,3,4,5,6}

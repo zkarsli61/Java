@@ -154,7 +154,6 @@ public class ReplitExamples {
 		return result;
 	}
 
-
 	public static void findDuplicateChars(String str) {
 //		findDuplicateChars("Javaisalsoeasy");
 		char ch;
