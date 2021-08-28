@@ -1,4 +1,4 @@
-package day19Loop;
+package day26Inheritance;
 
 public class Lesson04_Instance_Control_Flow extends Baba {
     int i  = 100;

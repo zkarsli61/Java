@@ -11,9 +11,11 @@ public class _1JdbcExecuteQuery {
 		Class.forName("oracle.jdbc.driver.OracleDriver");
 		
 		//3.Step:Call your friend means "establish connection with the database"
-		Connection con = DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521/ORCLCDB.localdomain", "techpro", "12345");
-		
+		//	Connection con = DriverManager.getConnection("jdbc:oracle:thin:@192.168.1.13:1521/ORCLCDB.localdomain", "techpro", "12345");
+
+		Connection con = DriverManager.getConnection("jdbc:oracle:thin:@192.168.1.14:1521/ORCLCDB.localdomain", "omerkrsli", "okarsli61");
 		//4.Step: Create some sentences to tell to your friend means "Create Statement"
+
 		Statement st = con.createStatement();
 		
 		//5.Step:Start to talk with your friend means "Create SQL Query and execute it"

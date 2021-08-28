@@ -95,8 +95,8 @@ System.out.println(removeDuplicates("zaaaafeeeer"));
     public static String reverse(String s) {
         return new StringBuilder(s).reverse().toString();}
     public int[] plusTwo(int[] a, int[] b) {return IntStream.concat(Arrays.stream(a), Arrays.stream(b)).toArray();}
-    static int findMaxs(int[] arr){
-        Integer max2 = Arrays.stream(arr).sorted().skip(arr.length-2).findFirst().getAsInt();
+    static int findMaxs(Integer[] arr){
+        Integer max2 = Arrays.asList(arr).stream().distinct().sorted(Comparator.reverseOrder()).skip(1).findFirst().get();
         return max2;
     }
 }
