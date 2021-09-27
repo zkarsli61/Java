@@ -124,26 +124,6 @@ public class Exercise01 {
         return arr;
     }
 
-    //14. Write a method that accepts an Array and returns the number/s that are not repeated in an ArrayList. Method returns the numbers in aN ArrayList. EX: arr = {1,1,2,2,3,3,4,5}  ---> [4,5]
-    static ArrayList<Integer> findUnique(int[] arr){
-        ArrayList<Integer> al = new ArrayList<>();
-
-        for(int num : arr){
-            int count = 0;
-            for(int num2 : arr){
-                if(num == num2) {
-                    count++;
-                    if (count>1){
-                        count = 0;
-                        break;
-                    }
-                }
-            }
-            if(count == 1)
-                al.add(num);
-        }
-        return al;
-    }
 
     //16. Write a method that takes two parameters: an ArrayList of Strings called wordList, and a String called targetWord. Method removes the targetWord from ArrayList.EX :ArrayList("hi","hey","hi","you"));  ----> removeAll(wordList,"hi"); --->["hey","you"].
     static ArrayList<String> removeWord(ArrayList<String> al, String word){
@@ -268,38 +248,7 @@ public class Exercise01 {
         System.out.println("Congrats! You did it...");
     }
 
-    // Find the closest 2 numbers without using sort() method
-    static void closestNums() {
-        List<Integer> list = new ArrayList<Integer>();
-        list.add(3);
-        list.add(6);
-        list.add(23);
-        list.add(87);
-        list.add(45);
-        list.add(8);
 
-        // we don't need to check the last element 1st for loop.
-        // because it will ve covered into the 2nd for loop.
-        // so The 1st element will be increased by 1 till list.size()-1
-        int minDif = Integer.MAX_VALUE;
-        int num1 = 0, num2 = 0;
-
-        for (int i = 0; i < list.size() - 1; i++) {
-            // the 2nd element should be ahead of the 1st element. That's why the 2nd index will start i+1
-            for (int j = i + 1; j < list.size(); j++) {
-                // we are calculating the difference between 2 currrent element
-                int dif = Math.abs(list.get(i) - list.get(j));
-                //and check to the minDif value
-                if (dif < minDif) {
-                    minDif = dif; // change the minDif value and the num1 and num2 as well
-                    // because we don't use sort method.
-                    num1 = list.get(i);
-                    num2 = list.get(j);
-                }
-            }
-        }
-        System.out.println("Closest numbers are " + num1 + "-" + num2);
-    }
 
     //	Interview Questions
     // How to create and initialize List or ArrayList

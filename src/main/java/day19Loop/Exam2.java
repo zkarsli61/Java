@@ -6,7 +6,6 @@ import java.util.Random;
 
 public class Exam2 {
     //1.A sandwich is two pieces of bread with something in between. Print the string that is between the first and last appearance of "bread" in the given string, or return string "nothing" if there are not two pieces of bread. EX: breadozkanbread --> ozkan, breadozkan --> nothing
-
     /**
      * @param str
      * @returns String between the word od breads otherwise returns "nothing"
@@ -20,7 +19,6 @@ public class Exam2 {
     }
 
     //2.Print true if the string "java" and "python" appear the same number of times in the given string word. EX : javajavajavpythonpythonpyt --> true
-
     /**
      * @param str
      * @returns if the string "java" and "python" appear the same number of times in the given str.
@@ -41,7 +39,6 @@ public class Exam2 {
     }
 
     //3.create a two dimensional array of random numbers.
-
     /**
      *
      * @param outerSize
@@ -59,7 +56,6 @@ public class Exam2 {
     }
 
         //4.Given a 2d array of ints, find the biggest number(int) in the array and print it.
-
     /**
      * @param arr is the 2 dim array.
      * @return the max number in the array that is passed in.
@@ -81,7 +77,6 @@ public class Exam2 {
     // Armstrong is a number that is equal to the sum of its own digits
     // and each digit being raised to the power of the number of digits.
     // EX: 371 = 3^3 + 7^3 + 1^3 => 371, 1634 = 1^4 + 6^4 + 3^4 + 4^4 == 1634
-
     /**
      * @param num
      * @return the number of digits
@@ -126,7 +121,6 @@ public class Exam2 {
     }
 
     //Write a function to check whether a string is pangram or not assuming that the string passed in does not have any punctuation. Pangrams are words or sentences containing every letter of the alphabet at least once. EX: The quick brown fox jumps over the lazy dog --> true
-
     public static void main(String[] args) {
         //Lesson05_1_for_Loop.timer(3);
         //System.out.println(isSandwich("breadpatiebreadmeatbreadbreadpicklesbread"));

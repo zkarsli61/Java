@@ -1,8 +1,8 @@
 package day19Loop;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Interview_Set1 {
     /*
@@ -19,14 +19,16 @@ public class Interview_Set1 {
     */
     public static void main(String[] args) {
         //swappingNumbers1(5,10);
-        System.out.println(isAnagram2("wha ztup","zup what"));
+//        System.out.println(isAnagram2("wha ztup","zup what"));
         //System.out.println(isReversed3("I love you"));
         //sortArrayWithoutUsingSortMethod4();
-        //System.out.println(countLetters5("aaabbbbccccc111"));
+        countLetters5("aaabbbbccccc111");
+        countLetters("aaabbbbccccc111");
         //System.out.println(isPalindrome6("madam"));
-        // System.out.println(fib7(2));
+//         fib7(6);
         //System.out.println(findMissingNumber8(new int[] {1,3,4,5,6,7,8,9,10}));
-        //System.out.println(isPrime9(29));
+//        System.out.println(isPrime9(25));
+//        System.out.println(isPrime91(25));
         //System.out.println(findRemainder10(5,10));
     }
 
@@ -112,29 +114,28 @@ public class Interview_Set1 {
     }
 
     //5.Write a method that returns how many times each letter is repeated?
+    public static void countLetters(String str){
+        List<String> arr = new ArrayList<String>(List.of(str.split("")));
+
+                arr.stream()
+                .filter(x->Collections.frequency(arr,x)!=1)
+                .distinct().collect(Collectors.toList()).forEach(System.out::println);
+    }
+
     public static Map<String, Integer> countLetters5(String str){
 
         Map<String,Integer> map = new HashMap<>();
-
-        //		String[] arr = str.split("");
-        //		int count = 0;
-        //
-        //		for(String each : arr) {
-        //			count = 0;
-        //			for(int i = 0; i < arr.length; i++) {
-        //
-        //				if(each.equals(arr[i]))
-        //					count++;
-        //			}
-        //			map.put(each,count);
-        //		}
 
         String[] strMap = str.split("");
         for(String each : strMap) {
             if(!map.containsKey(each))
                 map.put(each, 1);
             else
-                map.put(each,map.size());
+                map.put(each,map.get(each)+1);
+        }
+        for (Map.Entry<String,Integer> w: map.entrySet()) {
+            if (w.getValue()>1)
+                System.out.print(w+" ");
         }
         return map;
     }
@@ -164,17 +165,19 @@ public class Interview_Set1 {
     //7.Write a method that returns nth fibonacci number on given a number num. In fibonacci series, next number is the sum of previous two numbers for example 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144,...
     public static int fib7(int num) {
 
-        int a = 0;//first number
-        int b = 1;//second number
-        int c;//this is the next number
+        int f1 = 1;//first number
+        int f2 = 1;//second number
+        int newF2;//this is the next number
         if(num == 0)
-            return a;
-        for(int i = 2; i <= num; i++) {
-            c = a + b;
-            a = b;
-            b = c;
+            return f1;
+        System.out.print(num+": 1 1 ");
+        for(int i = 3; i <= num; i++) {
+            newF2 = f1 + f2;
+            System.out.print(newF2+" ");
+            f1 = f2;
+            f2 = newF2 ;
         }
-        return b;
+        return f2;
     }
 
     //8.Write a method that takes an array of integers between 1 and 10 (excluding one number) and returns the missing number.EX: missingNumber([1, 2, 2, 3, 3, 4, 6, 7, 8, 9, 10]) ➞ 5
@@ -188,6 +191,16 @@ public class Interview_Set1 {
                 return arr[i] + 1;
         }
         return 1;
+    }
+
+    public static boolean isPrime91(int num) {
+        int count=0;
+        for (int i=2; i <num ; i++) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+        return true;
     }
 
     //9.Write a method that checks if the passing argument is a prime number.

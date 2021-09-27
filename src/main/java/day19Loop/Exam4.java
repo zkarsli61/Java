@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.NoSuchFileException;
 import java.nio.file.Paths;
+import java.sql.Array;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -17,7 +18,8 @@ public class Exam4 {
     public static void main(String[] args) {
 //            arrangeFile("src/day27_JavaPractice/Atasozu.txt");
 //        System.out.println(getRandomLineFromInputFile("src/day27_JavaPractice/proverb.txt"));
-        theWordGame("la belle vie");
+//        theWordGame("la belle vie");
+
     }
 
     /*
@@ -78,30 +80,7 @@ public class Exam4 {
         return list;
     }
 
-    /*
-     * Mountain Array ==> [0, 2, 5, 3, 1] It is constantly increasing to
-     * the maximum value, decreasing constantly after the maximum value
-     *
-     * Not Mountain Array ==> [5, 2, 7, 1, 4] It is decreasing then increasing to
-     * the maximum value, decreasing and increasing after the maximum value
-     *
-     * Create a method to check if it is Mountain Array or not. Use as possible as
-     * Functional Programming
-     */
-    public static boolean isMountain(int[] input) {
-        if (input.length % 2 == 0) {
-            return false;
-        }
-        for (int i = 0; i < input.length - 1; i++) {
-            if (input[i] < input[i + 1])
-                return false;
-        }
-        for (int i = input.length / 2; i < input.length - 1; i++) {
-            if (input[i] < input[i + 1])
-                return false;
-        }
-        return true;
-    }
+
 
     /*
 	 							The Wheel Of Fortune Game (TWOF):
@@ -192,4 +171,3 @@ public class Exam4 {
         return live.toString();
     }
 }
-

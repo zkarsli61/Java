@@ -34,7 +34,9 @@ public class Exam3 {
         return set.size() == 26;
     }
 
-    //2.Write a method where u ask a user to enter a number until the total is at least 100 or number of trials is equal to 3. EX: 1,2,3 --> You ran out of trials! EX2: 1,2,97 --> You made it! your sum is 100.
+    //2.Write a method where u ask a user to enter a number until the total is at least 100 or
+    // number of trials is equal to 3. EX: 1,2,3 --> You ran out of trials! EX2: 1,2,97 -->
+    // You made it! your sum is 100.
     static void sumGame() {
         Scanner scan = new Scanner(System.in);
         int sum, trials;
