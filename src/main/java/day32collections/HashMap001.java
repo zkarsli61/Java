@@ -1,9 +1,9 @@
-package day34maps;
+package day32collections;
 
 import java.util.Arrays;
 import java.util.HashMap;
 
-public class HashMap01 {
+public class HashMap001 {
 
     public static void main(String[] args) {
 		

@@ -10,7 +10,7 @@ public class RunnerDay30 {
         hc1.climate();
         hc1.gasUsage();
 
-        //There is a difference in usage, static methods in a classs and static methods in an interface?
+        //There is a difference in usage, static methods in a class and static methods in an interface?
         //To call a static method from an interface use "interface name"
         Music.volume();
 

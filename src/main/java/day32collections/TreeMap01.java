@@ -1,4 +1,4 @@
-package day34maps;
+package day32collections;
 
 import java.util.HashMap;
 import java.util.TreeMap;
